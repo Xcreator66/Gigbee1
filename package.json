@@ -1,0 +1,32 @@
+{
+  "name": "gigbee",
+  "version": "1.4.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "mobile": "npm run start -w @gigbee/mobile",
+    "web": "npm run dev -w @gigbee/web",
+    "web:build": "npm run build -w @gigbee/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "preflight": "node scripts/preflight.mjs",
+    "doctor": "npm exec --workspace=@gigbee/mobile -- expo-doctor",
+    "verify": "npm run preflight && npm run sourcecheck && npm run typecheck && npm run web:build",
+    "sourcecheck": "node scripts/source-check.mjs",
+    "accountcheck": "node scripts/account-smoke.mjs",
+    "anoncheck": "node scripts/live-anon-check.mjs",
+    "auditcheck": "node scripts/audit-regression.mjs",
+    "production:preflight": "node scripts/production-preflight.mjs"
+  },
+  "overrides": {
+    "minimatch": "11.0.9"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "devDependencies": {
+    "minimatch": "11.0.9"
+  }
+}

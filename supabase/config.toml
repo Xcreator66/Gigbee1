@@ -1,0 +1,8 @@
+[functions.create-payment-link]
+verify_jwt = true
+
+[functions.razorpay-webhook]
+verify_jwt = false
+
+[functions.deliver-notifications]
+verify_jwt = false
