@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "GigBee",
+    "slug": "gigbee",
+    "scheme": "gigbee",
+    "version": "1.4.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.gigbee.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0F2D"
+      },
+      "versionCode": 14
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gigbee.app",
+      "buildNumber": "1.4.0"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#0B0F2D",
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#6546F5",
+          "defaultChannel": "gigbee-updates"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
